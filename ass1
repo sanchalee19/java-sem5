@@ -1,0 +1,101 @@
+public class Chair {
+
+	String material;
+
+	int price;
+
+	String rotation;
+
+	
+
+
+
+	public Chair() {
+
+		this.material="";
+
+		this.price=0;
+
+		this.rotation="";
+
+		// TODO Auto-generated constructor stub
+
+	}
+
+	
+
+	public Chair(String mat,int price,String rot) {
+
+		this.material=mat;
+
+		this.price=price;
+
+		this.rotation=rot;
+
+	}
+
+	
+
+	public Chair(Chair c) {
+
+		this.material=c.material;
+
+		this.price=c.price;
+
+		this.rotation=c.rotation;
+
+	}
+
+	
+
+	private void  acceptdata() {
+
+		Scanner s=new Scanner(System.in);
+
+		System.out.println("enter the material of chair :\n");
+
+		this.material=s.next();
+
+		System.out.println("enter the price of chair :\n");
+
+		this.price=s.nextInt();
+
+		System.out.println("enter the rotation of chair :\n");
+
+		this.rotation=s.next();
+
+		
+
+	}
+
+	
+
+	private void display() {
+
+		System.out.println("the details of chair are:\n"+"Material :"+this.material+"\nPrice :"+this.price+"\nRotation :"+this.rotation+"\n");
+
+	}
+
+	
+
+	public static void main(String[] args) {
+
+		Chair c1=new Chair();
+
+		c1.acceptdata();
+
+		c1.display();
+
+		Chair c2=new Chair(c1);
+
+		c2.display();
+
+		// TODO Auto-generated method stub
+
+
+
+	}
+
+
+
+}
